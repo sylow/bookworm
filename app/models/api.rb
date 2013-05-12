@@ -3,12 +3,13 @@ module Api
     include HTTParty
     base_uri 'https://www.googleapis.com/books/v1'
 
-    def initialize(opts={})
-      @api_key = opts[:api_key]
+    def initialize(api_key)
+      @api_key = api_key
     end
   
-    def search(query, opts={})
-      self.class.get("/volumes", query: {q: query, key: @api_key, maxResults: 16 })
+    def search(query, options={})
+      per_page = options[:per_page] || 18
+      self.class.get("/volumes", query: {q: query, key: @api_key, maxResults: per_page })
     end
   end
 end

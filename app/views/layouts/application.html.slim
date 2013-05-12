@@ -19,30 +19,22 @@ html lang="en" ng-app="Bookworm"
 
 
 
-  body
+  body ng-controller="BookCtrl"
     .navbar.navbar-fixed-top
       .navbar-inner
-        .container
+        .container        
           a.brand href="#"Bookworm
-          form class="form-search navbar-search pull-left"
+          form class="form-search navbar-search pull-left" ng-submit="search()"
             div class="input-append"
-              input type="text" class="span2 search-query"
+              input type="text" class="span2 search-query" ng-model="keywords"
               button type="submit" class="btn" Search          
               
     .container
       .row
-        .span10
+        .span12
           = bootstrap_flash
           = yield
-        .span2
-          .well.sidebar-nav
-            h3 Sidebar
-            ul.nav.nav-list
-              li.nav-header Sidebar
-              li= link_to "Link 1", "/path1"
-              li= link_to "Link 2", "/path2"
-              li= link_to "Link 3", "/path3"
-    
+          
       footer
         p &copy; Company 2013
     /!

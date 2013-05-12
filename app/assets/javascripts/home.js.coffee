@@ -6,4 +6,7 @@ app.factory "Book", ["$resource", ($resource) ->
 
 @BookCtrl = ["$scope", "Book", ($scope, Book) ->
   $scope.books = Book.query()
+  
+  $scope.search = ->  
+    newBooks = Book.query {keywords: $scope.keywords}, -> $scope.books = newBooks
 ]
