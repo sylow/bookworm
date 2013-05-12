@@ -1,8 +1,10 @@
 div ng-controller='BookCtrl'
-  ul
-    li ng-repeat="book in books"
-      span {{book.volumeInfo.title}}
-      div ng-repeat="author in book.volumeInfo.authors"
-        span {{author}}
-      div
-        img src='{{book.volumeInfo.imageLinks.thumbnail}}'
+  ul class="thumbnails"
+    li ng-repeat="book in books" class='span2'
+      div style='height:300px'
+        img src='{{book.volumeInfo.imageLinks.thumbnail}}' class="img-rounded" alt=""
+        div.caption
+          strong {{book.volumeInfo.title}}
+          ul
+            li ng-repeat="author in book.volumeInfo.authors" 
+              span {{author}}

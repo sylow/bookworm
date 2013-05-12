@@ -21,3 +21,6 @@ gem 'jquery-rails'
 gem 'slim'
 gem 'httparty', '0.7.8'
 gem 'dalli'
+gem "therubyracer"
+gem "less-rails"
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'

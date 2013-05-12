@@ -8,7 +8,7 @@ module Api
     end
   
     def search(query, opts={})
-      self.class.get("/volumes", query: {q: query, key: @api_key })
+      self.class.get("/volumes", query: {q: query, key: @api_key, maxResults: 16 })
     end
   end
 end
