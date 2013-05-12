@@ -38,10 +38,14 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
+    crack (0.1.8)
+    dalli (2.6.3)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
     hike (1.2.2)
+    httparty (0.7.8)
+      crack (= 0.1.8)
     i18n (0.6.1)
     journey (1.0.4)
     jquery-rails (2.2.1)
@@ -113,6 +117,8 @@ PLATFORMS
 DEPENDENCIES
   angularjs-rails
   coffee-rails (~> 3.2.1)
+  dalli
+  httparty (= 0.7.8)
   jquery-rails
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)

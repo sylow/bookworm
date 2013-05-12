@@ -17,6 +17,7 @@ group :assets do
   gem 'angularjs-rails'
 end
 
-gem 'slim'
 gem 'jquery-rails'
-
+gem 'slim'
+gem 'httparty', '0.7.8'
+gem 'dalli'
