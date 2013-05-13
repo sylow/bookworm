@@ -8,5 +8,5 @@ app.factory "Book", ["$resource", ($resource) ->
   $scope.books = Book.query()
   
   $scope.search = ->  
-    newBooks = Book.query {keywords: $scope.keywords}, -> $scope.books = newBooks
+    $scope.books = Book.query {keywords: $scope.keywords}
 ]
