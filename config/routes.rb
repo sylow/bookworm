@@ -1,6 +1,9 @@
 Bookworm::Application.routes.draw do
-  root to: "home#index"
-  scope :api do
-    resources :books
+  namespace :api, defaults: {format: 'json'} do
+    namespace :v1 do
+      resources :books
+    end
   end
+  
+  root to: "home#index"
 end
