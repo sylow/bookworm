@@ -5,10 +5,9 @@ gem 'rails', '3.2.13'
 group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'
 end
-group :development do
-  gem 'thin'
+group :production do
+  gem 'pg'
 end
-
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -27,3 +26,4 @@ gem 'dalli'
 gem "therubyracer"
 gem "less-rails"
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'thin'
