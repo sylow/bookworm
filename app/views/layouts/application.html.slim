@@ -16,29 +16,24 @@ html lang="en" ng-app="Bookworm"
     = favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72'
     = favicon_link_tag 'apple-touch-icon-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png'
     = favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
-
+    = javascript_include_tag "application"
 
 
   body ng-controller="BookCtrl"
     .navbar.navbar-fixed-top
       .navbar-inner
-        .container        
+        .container
           a.brand href="#"Bookworm
           form class="form-search navbar-search pull-left" ng-submit="search()"
             div class="input-append"
               input type="text" class="span2 search-query" ng-model="keywords"
-              button type="submit" class="btn" Search          
-              
+              button type="submit" class="btn" Search
+
     .container
       .row
         .span12
           = bootstrap_flash
           = yield
-          
+
       footer
-        p &copy; Company 2013
-    /!
-      Javascripts
-      \==================================================
-    /! Placed at the end of the document so the pages load faster
-    = javascript_include_tag "application"
+        p &copy; Sylow Web Development

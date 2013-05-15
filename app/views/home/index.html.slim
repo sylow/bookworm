@@ -2,9 +2,18 @@ div
   ul class="thumbnails"
     li ng-repeat="book in books" class='span2'
       div style='height:300px'
-        img src='{{book.volumeInfo.imageLinks.thumbnail}}' class="img-rounded" alt=""
+        img ng-src='{{book.volumeInfo.imageLinks.thumbnail}}' class="img-rounded" alt=""
         div.caption
-          strong {{book.volumeInfo.title}}
+          strong  ng-cloak="" class="ng-cloak" {{book.volumeInfo.title}}
           ul
-            li ng-repeat="author in book.volumeInfo.authors" 
-              span {{author}}
+            li ng-cloak="" class="ng-cloak" ng-repeat="author in book.volumeInfo.authors"
+              span ng-cloak="" class="ng-cloak" {{author}}
+.center
+  .pagination
+    ul
+      li  ng-class="{disabled: currentPage == 0}"
+        a href="" ng-click="prevPage()"
+      li ng-repeat="n in range(pagedProjects.length)" ng-class="{active: n == currentPage}" ng-click="setPage()"
+        a href="" ng-bind="n + 1"
+      li ng-class="{disabled: currentPage == books.length - 1}"
+        a href="" ng-click="nextPage()"
