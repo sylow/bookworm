@@ -36,7 +36,8 @@ html lang="en" ng-app="Bookworm"
                 a href="" ng-bind="n " {{n}
               li ng-class="{'disabled': currentPage == 0}"
                 a href="" ng-click="nextPage()" >>
-
+              li class='disabled'
+                a href="#" {{nrOfPages}} pages of results.
     .container
       .row
         .span12
