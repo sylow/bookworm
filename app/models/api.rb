@@ -4,8 +4,8 @@ module Api
     base_uri 'https://www.googleapis.com/books/v1'
 
     def search(query, options={})
-      per_page    = (options[:per_page] || 15).to_i
-      page_number = (options[:page_number] || 1).to_i
+      per_page    = (options[:per_page]    || 18).to_i
+      page_number = (options[:page_number] ||  1).to_i
 
       self.class.get("/volumes", query: {q: query, key: Api.configuration[:api_key], maxResults: per_page, startIndex: (page_number - 1)* per_page })
     end

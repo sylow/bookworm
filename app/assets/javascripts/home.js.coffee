@@ -43,7 +43,7 @@ app.filter "makeRange", ->
     data = Book.query({keywords: $scope.keywords, page: page}, ->
       $scope.currentPage = page
       $scope.books = data.items
-      $scope.nrOfPages = Math.ceil(parseInt(data.totalItems) / 15)
+      $scope.nrOfPages = Math.ceil(parseInt(data.totalItems) / 18)
       console.log $scope.nrOfPages
       console.log $scope.currentPage
       if $scope.nrOfPages > ($scope.currentPage + 3)
