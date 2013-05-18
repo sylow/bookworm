@@ -28,6 +28,14 @@ html lang="en" ng-app="Bookworm"
             div class="input-append"
               input type="text" class="span2 search-query" ng-model="keywords"
               button type="submit" class="btn" Search
+          .pagination ng-hide="nrOfPages == 0"
+            ul  ng-cloak="" class="ng-cloak"
+              li ng-class="{'disabled': currentPage == 0}"
+                a href="" ng-click="prevPage()" <<
+              li ng-repeat="n in [lowerBound, upperBound] | makeRange" ng-class="{active: n == currentPage}" ng-click="setPage()"
+                a href="" ng-bind="n " {{n}
+              li ng-class="{'disabled': currentPage == 0}"
+                a href="" ng-click="nextPage()" >>
 
     .container
       .row
