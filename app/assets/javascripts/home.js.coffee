@@ -44,8 +44,6 @@ app.filter "makeRange", ->
       $scope.currentPage = page
       $scope.books = data.items
       $scope.nrOfPages = Math.ceil(parseInt(data.totalItems) / 18)
-      console.log $scope.nrOfPages
-      console.log $scope.currentPage
       if $scope.nrOfPages > ($scope.currentPage + 3)
         $scope.upperBound = $scope.currentPage + 3
       else
@@ -56,8 +54,6 @@ app.filter "makeRange", ->
       else
         $scope.lowerBound = $scope.currentPage - 3
 
-      console.log $scope.lowerBound
-      console.log $scope.upperBound
     )
 
   $scope.keywords = 'Ruby On Rails'

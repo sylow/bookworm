@@ -1,3 +1,3 @@
 Api.configure do |config|
-  config.api_key = 'AIzaSyD8bZ4n5R8IMxRu5NiblWqPaDrV0wEtUEo'
+  config.api_key = 'AIzaSyAv9nrT8wsGPu6fdGuEcstg6yTOkAViB4Q'
 end
